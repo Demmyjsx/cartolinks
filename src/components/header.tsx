@@ -24,6 +24,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 
 
@@ -46,7 +47,8 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline">
+              <Button >
+                <Image src="/logo.jpeg" alt="Logo" width={30} height={30} className="rounded-full"/>
                 businesscontentcreator
                 <ChevronDown className="w-4 h-4 text-muted-foreground hidden sm:inline" />
               </Button>
@@ -147,7 +149,7 @@ export default function Header() {
                 </Button>
                 <Button variant="ghost" size="sm" onClick={toggleDarkMode} className="w-8 h-8 p-0">
                  <Avatar className="w-7 h-7">
-                    <AvatarImage src="/" />
+                    <AvatarImage src="/logo.jpeg" />
                     
                   </Avatar>
                 </Button>

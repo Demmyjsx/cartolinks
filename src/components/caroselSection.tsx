@@ -96,7 +96,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative px-2 md:px-0">
+    <section className="relative px-2 mt-20 md:px-0 mx-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
         {/* Featured Models */}
         <Card className="relative overflow-hidden border-0 min-h-[300px] lg:min-h-[400px] transition-all duration-500">
@@ -160,7 +160,7 @@ export default function HeroSection() {
           </Card>
 
           {/* Navigation buttons */}
-          <div className="flex gap-2 mt-4 justify-end">
+          <div className="flex gap-2 mt-4 justify-end mr-2">
             <Button
               variant="ghost"
               size="sm"
@@ -181,7 +181,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Dots */}
+    
       <div className="flex items-center justify-center gap-2 mb-4">
         {featuredModels.map((_, index) => (
           <div

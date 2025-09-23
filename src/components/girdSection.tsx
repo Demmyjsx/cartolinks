@@ -1,51 +1,70 @@
-import { Button } from "@/components/ui/button"
-import { ImageIcon, Video, Zap, Sparkles, ArrowUpDown, Train, ChevronRight } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import {
+  ImageIcon,
+  Video,
+  Zap,
+  Sparkles,
+  ArrowUpDown,
+  Train,
+  ChevronRight,
+  PencilOff,
+  MicVocal,
+} from "lucide-react"
 
 const tools = [
   {
     name: "Image",
     description: "Create images with prompts",
     icon: ImageIcon,
-   
+    badge: "NEW",
+    color: "bg-gray-700",
   },
   {
     name: "Video",
     description: "Generate videos with Haiper, Pika, and more",
     icon: Video,
-
+    color: "bg-yellow-500",
   },
   {
     name: "RealTime",
     description: "Real-time rendering as a camera",
     icon: Zap,
-  
+    badge: null,
+    color: "bg-green-200",
   },
   {
     name: "Enhancer",
     description: "Upscale and enhance images and videos",
     icon: Sparkles,
-    
+    badge: "NEW",
+    color: "bg-gray-600",
   },
   {
     name: "Edit",
     description: "Edit images with AI or manual photos and generations",
-    icon: ImageIcon,
-    
-    
+    icon: PencilOff,
+    badge: "NEW",
+    color: "bg-purple-800",
+  },
+  {
+    name: "Video Lipsync",
+    description: "Teach knea to replicate styles, and more",
+    icon: MicVocal,
+    color: "bg-purple-200",
   },
   {
     name: "Motion Transfer",
     description: "Transfer motion from one video to another",
     icon: ArrowUpDown,
-    
-    badgeVariant: "default" as const,
+    badge: "NEW",
+    color: "bg-black",
   },
   {
     name: "Train",
     description: "Train AI to replicate your style, products, or characters",
     icon: Train,
-    
-    badgeVariant: null,
+    badge: null,
+    color: "bg-orange-400",
   },
 ]
 
@@ -54,41 +73,57 @@ export default function GridSection() {
     <section className="space-y-6">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-bold">Generate</h2>
-        <a className="text-sm ">
+        <a className="text-sm flex items-center gap-1 cursor-pointer">
           Show all
-          <ChevronRight className="w-4 h-4 ml-1" />
+          <ChevronRight className="w-4 h-4" />
         </a>
       </div>
 
+      {/* Grid of tools */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {tools.map((tool) => {
           const IconComponent = tool.icon
           return (
-            <div key={tool.name} className="p-4 flex gap-2.5 hover:shadow-md transition-shadow cursor-pointer group">
-              <div className="flex items-start justify-between mb-3">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <IconComponent className="w-5 h-5 text-primary" />
+            <div
+              key={tool.name}
+              className="p-4 flex flex-col hover:shadow-md transition-shadow cursor-pointer group rounded-lg"
+            >
+              <div className="flex gap-3 items-start">
+                {/* Icon */}
+                <div
+                  className={`w-10 h-10 rounded-lg flex items-center justify-center ${tool.color}`}
+                >
+                  <IconComponent className="w-5 h-5 text-white" />
                 </div>
-               
-                  
+
+             
+                <div className="flex flex-col">
+                  <div className="flex items-center gap-2">
+                    <h3 className="font-semibold text-sm">{tool.name}</h3>
+                    {tool.badge && (
+                      <Badge className="text-[10px] px-2 py-0.5 bg-blue-500 text-white rounded-md">
+                        {tool.badge}
+                      </Badge>
+                    )}
+                  </div>
+                 <div className="flex items-center gap-2 mt-1">
+                        <p className="text-xs text-muted-foreground leading-relaxed flex-1">
+                            {tool.description}
+                        </p>
+                        <a className="text-xs bg-gray-300 px-1.5 rounded-md py-1 hover:bg-gray-200 shrink-0"> Open </a>
+                 </div>
+
+                </div>
               </div>
 
-              <div className="space-y-2">
-                <h3 className="font-semibold text-sm">{tool.name}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">{tool.description}</p>
-              </div>
-
-              <div className="mt-4 flex justify-end">
-                <Button size="sm" variant="outline" className="text-xs bg-gray-100 hover:bg-gray-200">
-                  Open
-                </Button>
-              </div>
+         
+              
             </div>
           )
         })}
       </div>
 
-      
+     
       <div className="mt-12">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-2xl font-bold">Gallery</h2>
@@ -102,6 +137,30 @@ export default function GridSection() {
           </div>
         </div>
       </div>
+
+      
+      <footer className="bg-gray-900 text-white mt-12">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <div className="w-6 h-6 bg-foreground rounded-sm flex items-center justify-center">
+                <span className="text-background font-bold text-3xl">K</span>
+              </div>
+              <h1 className="font-bold text-3xl">Krea AI</h1>
+            </div>
+
+            <div className="flex items-center gap-2 text-3xl text-muted-foreground">
+              <span>curated by</span>
+              <div className="flex items-center gap-1 font-semibold text-foreground">
+                <div className="w-5 h-5 bg-foreground rounded flex items-center justify-center">
+                  <span className="text-background font-bold text-xs">M</span>
+                </div>
+                Mobbin
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </section>
   )
 }

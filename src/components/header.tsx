@@ -48,7 +48,7 @@ export default function Header() {
 
   const GlassmorphicNavbar = ({ className = "" }) => (
     <div
-      className={`flex p-1 sm:p-2 items-center gap-0.5 sm:gap-1 border border-white/30 rounded-lg sm:rounded-xl backdrop-blur-lg bg-white/20 dark:bg-gray-800/30 ${className}`}
+      className={`flex p-1 sm:p-2 items-center gap-0.5 sm:gap-1 border border-white/30 rounded-lg sm:rounded-xl backdrop-blur-lg bg-gray-300  ${className}`}
     >
       <Button
         variant="ghost"
@@ -117,30 +117,30 @@ export default function Header() {
           <div className="space-y-2">
            
             <div className="flex flex-col gap-2">
-              <Button variant="ghost" className="justify-start gap-3 h-12">
+              <a href="#" className="justify-start gap-3 h-12">
                 <Home className="w-4 h-4" />
                 <span>Home</span>
-              </Button>
-              <Button variant="ghost" className="justify-start gap-3 h-12">
+              </a>
+a              <a href="#" className="justify-start gap-3 h-12">
                 <MessageSquare className="w-4 h-4" />
                 <span>Messages</span>
-              </Button>
-              <Button variant="ghost" className="justify-start gap-3 h-12">
+              </a>
+              <a href="#" className="justify-start gap-3 h-12">
                 <Bookmark className="w-4 h-4" />
                 <span>Bookmarks</span>
-              </Button>
-              <Button variant="ghost" className="justify-start gap-3 h-12">
+              </a>
+              <a href="#" className="justify-start gap-3 h-12">
                 <Zap className="w-4 h-4" />
                 <span>Generate</span>
-              </Button>
-              <Button variant="ghost" className="justify-start gap-3 h-12">
+              </a>
+              <a href="#" className="justify-start gap-3 h-12">
                 <Check className="w-4 h-4" />
                 <span>Tasks</span>
-              </Button>
-              <Button variant="ghost" className="justify-start gap-3 h-12">
+              </a>
+              <a href="#" className="justify-start gap-3 h-12">
                 <Triangle className="w-4 h-4" />
                 <span>Tools</span>
-              </Button>
+              </a>
               
             </div>
           </div>
@@ -148,24 +148,19 @@ export default function Header() {
           <div className="space-y-2">
       
             <div className="flex flex-col gap-2">
-              <Button variant="ghost" className="justify-start gap-3 h-12">
+              <a href="#" className="justify-start gap-3 h-12">
                 <Gallery className="w-4 h-4" />
                 <span>Gallery</span>
-              </Button>
-              <Button variant="ghost" className="justify-start gap-3 h-12">
+              </a >
+              <a href="#" className="justify-start gap-3 h-12">
                 <HelpCircle className="w-4 h-4" />
                 <span>Support</span>
-              </Button>
-              <Button variant="ghost" className="justify-start gap-3 h-12">
+              </a >
+              <a href="#" className="justify-start gap-3 h-12">
                 <Bell className="w-4 h-4" />
                 <span>Notifications</span>
-              </Button>
-              <Button variant="ghost" onClick={toggleDarkMode} className="justify-start gap-3 h-12">
-                <Avatar className="w-4 h-4">
-                  <AvatarImage src="/diverse-user-avatars.png" />
-                </Avatar>
-                <span>Profile</span>
-              </Button>
+              </a >
+              
             </div>
           </div>
         </div>

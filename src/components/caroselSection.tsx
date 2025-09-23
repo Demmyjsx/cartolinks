@@ -14,8 +14,7 @@ const featuredModels = [
     description:
       "Generate complex images with the latest raw and powerful WAN 2.2 model. Exceptional prompt adherence and ultra-realistic results.",
     buttonText: "Try WAN 2.2",
-    backgroundImage: "/portrait-of-person-with-artistic-lighting.jpg",
-    gradient: "from-blue-900/20 to-purple-900/20",
+    backgroundImage: "/cyberpunk.jpg",
   },
   {
     id: 2,
@@ -25,8 +24,7 @@ const featuredModels = [
     description:
       "Create stunning, high-quality images with OpenAI's most advanced image generation model. Perfect for creative projects and professional use.",
     buttonText: "Try DALL-E 3",
-    backgroundImage: "/futuristic-ai-art.jpg",
-    gradient: "from-green-900/20 to-teal-900/20",
+    backgroundImage: "/manart.jpg",
   },
   {
     id: 3,
@@ -36,8 +34,7 @@ const featuredModels = [
     description:
       "Transform your ideas into breathtaking artwork with Midjourney's cutting-edge AI. Ideal for artistic and creative applications.",
     buttonText: "Try Midjourney",
-    backgroundImage: "/abstract-digital-art.jpg",
-    gradient: "from-purple-900/20 to-pink-900/20",
+    backgroundImage: "/digital.jpg",
   },
   {
     id: 4,
@@ -47,8 +44,7 @@ const featuredModels = [
     description:
       "Create dynamic video content with AI-powered generation. Transform static images into engaging video sequences.",
     buttonText: "Try Stable Video",
-    backgroundImage: "/cyberpunk-portrait.jpg",
-    gradient: "from-orange-900/20 to-red-900/20",
+    backgroundImage: "/person.webp",
   },
 ]
 
@@ -59,8 +55,7 @@ const openSourModels = [
     subtitle: "FLUX1 Krea",
     description:
       "We've made it our mission to FLUX1 Krea model super-quick. Download and run our model samples and the technical report of our model.",
-    backgroundImage: "/luxury-whiskey-bottle-on-dark-background.jpg",
-    gradient: "from-amber-900/20 to-orange-900/20",
+    backgroundImage: "/eyes.webp",
   },
   {
     id: 2,
@@ -68,8 +63,7 @@ const openSourModels = [
     subtitle: "Stable Diffusion XL",
     description:
       "Experience the power of open-source image generation with Stable Diffusion XL. High-quality results with complete creative control.",
-    backgroundImage: "/stable-diffusion-artwork.jpg",
-    gradient: "from-red-900/20 to-rose-900/20",
+    backgroundImage: "/Dog.webp",
   },
   {
     id: 3,
@@ -77,8 +71,7 @@ const openSourModels = [
     subtitle: "ComfyUI Workflow",
     description:
       "Advanced node-based interface for complex AI workflows. Build custom pipelines and achieve professional-grade results.",
-    backgroundImage: "/comfyui-workflow-visualization.jpg",
-    gradient: "from-indigo-900/20 to-blue-900/20",
+    backgroundImage: "/whiskey.jpg",
   },
 ]
 
@@ -89,7 +82,7 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeatured((prev) => (prev + 1) % featuredModels.length)
-    }, 1500)
+    }, 2500)
 
     return () => clearInterval(interval)
   }, [])
@@ -105,19 +98,16 @@ export default function HeroSection() {
   return (
     <section className="relative px-2 md:px-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-        <Card
-          className={`relative overflow-hidden bg-gradient-to-br ${featuredModels[currentFeatured].gradient} border-0 min-h-[300px] lg:min-h-[400px] transition-all duration-500`}
-        >
+        {/* Featured Models */}
+        <Card className="relative overflow-hidden border-0 min-h-[300px] lg:min-h-[400px] transition-all duration-500">
           <div
-            className="absolute inset-0 bg-cover bg-center opacity-60 transition-all duration-500"
+            className="absolute inset-0 bg-cover bg-center transition-all duration-500"
             style={{
               backgroundImage: `url('${featuredModels[currentFeatured].backgroundImage}')`,
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
           <div className="relative z-10 p-6 lg:p-8 h-full flex flex-col justify-between">
-            <div className="text-xs text-white/70 uppercase tracking-wider">
+            <div className="text-xs text-white/90 uppercase tracking-wider">
               {featuredModels[currentFeatured].label}
             </div>
 
@@ -129,7 +119,7 @@ export default function HeroSection() {
                 <h3 className="text-lg lg:text-xl text-white/90 font-medium mb-3">
                   {featuredModels[currentFeatured].subtitle}
                 </h3>
-                <p className="text-sm text-white/70 max-w-md leading-relaxed">
+                <p className="text-sm text-white max-w-md leading-relaxed">
                   {featuredModels[currentFeatured].description}
                 </p>
               </div>
@@ -141,20 +131,17 @@ export default function HeroSection() {
           </div>
         </Card>
 
+        {/* Open Source Models */}
         <div className="relative">
-          <Card
-            className={`relative overflow-hidden bg-gradient-to-br ${openSourModels[currentOpenSour].gradient} border-0 min-h-[300px] lg:min-h-[400px] transition-all duration-300`}
-          >
+          <Card className="relative overflow-hidden border-0 min-h-[300px] lg:min-h-[400px] transition-all duration-300">
             <div
-              className="absolute inset-0 bg-cover bg-center opacity-70 transition-all duration-300"
+              className="absolute inset-0 bg-cover bg-center transition-all duration-300"
               style={{
                 backgroundImage: `url('${openSourModels[currentOpenSour].backgroundImage}')`,
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
             <div className="relative z-10 p-6 lg:p-8 h-full flex flex-col justify-between">
-              <div className="text-xs text-white/70 uppercase tracking-wider">OR MODEL</div>
+              <div className="text-xs text-white/90 uppercase tracking-wider">OR MODEL</div>
 
               <div className="space-y-4">
                 <div>
@@ -164,7 +151,7 @@ export default function HeroSection() {
                   <h3 className="text-lg lg:text-xl text-white/90 font-medium mb-3">
                     {openSourModels[currentOpenSour].subtitle}
                   </h3>
-                  <p className="text-sm text-white/70 max-w-md leading-relaxed">
+                  <p className="text-sm text-white max-w-md leading-relaxed">
                     {openSourModels[currentOpenSour].description}
                   </p>
                 </div>
@@ -172,7 +159,8 @@ export default function HeroSection() {
             </div>
           </Card>
 
-          <div className="flex gap-2 mt-4 justify-start">
+          {/* Navigation buttons */}
+          <div className="flex gap-2 mt-4 justify-end">
             <Button
               variant="ghost"
               size="sm"
@@ -193,6 +181,7 @@ export default function HeroSection() {
         </div>
       </div>
 
+      {/* Dots */}
       <div className="flex items-center justify-center gap-2 mb-4">
         {featuredModels.map((_, index) => (
           <div

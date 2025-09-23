@@ -141,10 +141,7 @@ export default function Header() {
                 <Triangle className="w-4 h-4" />
                 <span>Tools</span>
               </Button>
-              <Button variant="ghost" className="justify-start gap-3 h-12">
-                <Square className="w-4 h-4" />
-                <span>Projects</span>
-              </Button>
+              
             </div>
           </div>
 
@@ -186,7 +183,7 @@ export default function Header() {
                 <Button variant="ghost" className="gap-1 sm:gap-2 px-2 sm:px-3">
                   <Image src="/logo.jpeg" alt="Logo" width={24} height={24} className="rounded-full" />
                   <span className="hidden sm:inline text-sm">businesscontentcreator</span>
-                  <span className="sm:hidden text-xs">bcc</span>
+                  <span className="sm:hidden text-xs">businesscontentcreator</span>
                   <ChevronDown className="w-3 h-3 sm:w-4 sm:h-4 text-muted-foreground" />
                 </Button>
               </DropdownMenuTrigger>

@@ -112,126 +112,126 @@ export default function Header() {
           </Button>
         </div>
 
-        <div className="space-y-6">
-          
-          <div className="space-y-2">
-           
-            <div className="flex flex-col gap-2">
-              <a href="#" className="justify-start gap-3 h-12">
-                <Home className="w-4 h-4" />
-                <span>Home</span>
-              </a>
-a              <a href="#" className="justify-start gap-3 h-12">
-                <MessageSquare className="w-4 h-4" />
-                <span>Messages</span>
-              </a>
-              <a href="#" className="justify-start gap-3 h-12">
-                <Bookmark className="w-4 h-4" />
-                <span>Bookmarks</span>
-              </a>
-              <a href="#" className="justify-start gap-3 h-12">
-                <Zap className="w-4 h-4" />
-                <span>Generate</span>
-              </a>
-              <a href="#" className="justify-start gap-3 h-12">
-                <Check className="w-4 h-4" />
-                <span>Tasks</span>
-              </a>
-              <a href="#" className="justify-start gap-3 h-12">
-                <Triangle className="w-4 h-4" />
-                <span>Tools</span>
-              </a>
-              
+          <div className="space-y-6">
+            
+            <div className="space-y-2">
+            
+              <div className="flex flex-col gap-2">
+                <a href="#" className="justify-start gap-3 h-12">
+                  <Home className="w-4 h-4" />
+                  <span>Home</span>
+                </a>
+  a              <a href="#" className="justify-start gap-3 h-12">
+                  <MessageSquare className="w-4 h-4" />
+                  <span>Messages</span>
+                </a>
+                <a href="#" className="justify-start gap-3 h-12">
+                  <Bookmark className="w-4 h-4" />
+                  <span>Bookmarks</span>
+                </a>
+                <a href="#" className="justify-start gap-3 h-12">
+                  <Zap className="w-4 h-4" />
+                  <span>Generate</span>
+                </a>
+                <a href="#" className="justify-start gap-3 h-12">
+                  <Check className="w-4 h-4" />
+                  <span>Tasks</span>
+                </a>
+                <a href="#" className="justify-start gap-3 h-12">
+                  <Triangle className="w-4 h-4" />
+                  <span>Tools</span>
+                </a>
+                
+              </div>
             </div>
-          </div>
 
-          <div className="space-y-2">
-      
-            <div className="flex flex-col gap-2">
-              <a href="#" className="justify-start gap-3 h-12">
-                <Gallery className="w-4 h-4" />
-                <span>Gallery</span>
-              </a >
-              <a href="#" className="justify-start gap-3 h-12">
-                <HelpCircle className="w-4 h-4" />
-                <span>Support</span>
-              </a >
-              <a href="#" className="justify-start gap-3 h-12">
-                <Bell className="w-4 h-4" />
-                <span>Notifications</span>
-              </a >
-              
+            <div className="space-y-2">
+        
+              <div className="flex flex-col gap-2">
+                <a href="#" className="justify-start gap-3 h-12">
+                  <Gallery className="w-4 h-4" />
+                  <span>Gallery</span>
+                </a >
+                <a href="#" className="justify-start gap-3 h-12">
+                  <HelpCircle className="w-4 h-4" />
+                  <span>Support</span>
+                </a >
+                <a href="#" className="justify-start gap-3 h-12">
+                  <Bell className="w-4 h-4" />
+                  <span>Notifications</span>
+                </a >
+                
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  )
+    )
 
-  return (
-    <>
-      <header className="border-border mt-2">
-        <div className="container mx-auto px-2 sm:px-4 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="gap-1 sm:gap-2 px-2 sm:px-3">
-                  <Image src="/logo.jpeg" alt="Logo" width={24} height={24} className="rounded-full" />
-                  <span className="hidden sm:inline text-sm">businesscontentcreator</span>
-                  <span className="sm:hidden text-xs">businesscontentcreator</span>
-                  <ChevronDown className="w-3 h-3 sm:w-4 sm:h-4 text-muted-foreground" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent
-                className="w-56 bg-gray-400 text-white border border-gray-700 shadow-lg dark:bg-gray-900 dark:text-white"
-                align="start"
+    return (
+      <>
+        <header className="border-border mt-2">
+          <div className="container mx-auto px-2 sm:px-4 h-14 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="gap-1 sm:gap-2 px-2 sm:px-3">
+                    <Image src="/logo.jpeg" alt="Logo" width={24} height={24} className="rounded-full" />
+                    <span className="hidden sm:inline text-sm">businesscontentcreator</span>
+                    <span className="sm:hidden text-xs">businesscontentcreator</span>
+                    <ChevronDown className="w-3 h-3 sm:w-4 sm:h-4 text-muted-foreground" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent
+                  className="w-56 bg-gray-400 text-white border border-gray-700 shadow-lg dark:bg-gray-900 dark:text-white"
+                  align="start"
+                >
+                  <DropdownMenuLabel className="text-gray-300">My Account</DropdownMenuLabel>
+                  <DropdownMenuGroup>
+                    <DropdownMenuItem>Profile</DropdownMenuItem>
+                    <DropdownMenuItem>Billing</DropdownMenuItem>
+                    <DropdownMenuItem>Settings</DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="/login">GitHub</Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuGroup>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+
+            <GlassmorphicNavbar className="hidden md:flex" />
+
+            <div className="flex items-center gap-1 sm:gap-2">
+              <Button variant="ghost" size="sm" className="gap-1 sm:gap-2 text-xs hidden md:flex px-2 sm:px-3">
+                <Gallery className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span className="hidden lg:inline">Gallery</span>
+              </Button>
+              <Button variant="ghost" size="sm" className="gap-1 sm:gap-2 text-xs hidden md:flex px-2 sm:px-3">
+                <HelpCircle className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span className="hidden lg:inline">Support</span>
+              </Button>
+              <Button variant="ghost" size="sm" className="w-6 h-6 sm:w-8 sm:h-8 p-0 hidden md:flex">
+                <Bell className="w-3 h-3 sm:w-4 sm:h-4" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleDarkMode}
+                className="w-6 h-6 sm:w-8 sm:h-8 p-0 hidden md:flex"
               >
-                <DropdownMenuLabel className="text-gray-300">My Account</DropdownMenuLabel>
-                <DropdownMenuGroup>
-                  <DropdownMenuItem>Profile</DropdownMenuItem>
-                  <DropdownMenuItem>Billing</DropdownMenuItem>
-                  <DropdownMenuItem>Settings</DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <Link href="/login">Github</Link>
-                  </DropdownMenuItem>
-                </DropdownMenuGroup>
-              </DropdownMenuContent>
-            </DropdownMenu>
+                <Avatar className="w-5 h-5 sm:w-7 sm:h-7">
+                  <AvatarImage src="/diverse-user-avatars.png" />
+                </Avatar>
+              </Button>
+
+              <Button variant="ghost" size="sm" onClick={toggleMobileMenu} className="w-8 h-8 p-0 md:hidden">
+                <Menu className="w-4 h-4" />
+              </Button>
+            </div>
           </div>
+        </header>
 
-          <GlassmorphicNavbar className="hidden md:flex" />
-
-          <div className="flex items-center gap-1 sm:gap-2">
-            <Button variant="ghost" size="sm" className="gap-1 sm:gap-2 text-xs hidden md:flex px-2 sm:px-3">
-              <Gallery className="w-3 h-3 sm:w-4 sm:h-4" />
-              <span className="hidden lg:inline">Gallery</span>
-            </Button>
-            <Button variant="ghost" size="sm" className="gap-1 sm:gap-2 text-xs hidden md:flex px-2 sm:px-3">
-              <HelpCircle className="w-3 h-3 sm:w-4 sm:h-4" />
-              <span className="hidden lg:inline">Support</span>
-            </Button>
-            <Button variant="ghost" size="sm" className="w-6 h-6 sm:w-8 sm:h-8 p-0 hidden md:flex">
-              <Bell className="w-3 h-3 sm:w-4 sm:h-4" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleDarkMode}
-              className="w-6 h-6 sm:w-8 sm:h-8 p-0 hidden md:flex"
-            >
-              <Avatar className="w-5 h-5 sm:w-7 sm:h-7">
-                <AvatarImage src="/diverse-user-avatars.png" />
-              </Avatar>
-            </Button>
-
-            <Button variant="ghost" size="sm" onClick={toggleMobileMenu} className="w-8 h-8 p-0 md:hidden">
-              <Menu className="w-4 h-4" />
-            </Button>
-          </div>
-        </div>
-      </header>
-
-      {isMobileMenuOpen && <MobileMenu />}
-    </>
-  )
-}
+        {isMobileMenuOpen && <MobileMenu />}
+      </>
+    )
+  }

@@ -103,70 +103,70 @@ export default function Header() {
   )
 
   const MobileMenu = () => (
-    <div className="md:hidden fixed inset-0 z-50 backdrop-blur-sm">
-      <div className="fixed right-0 top-0 h-full w-80 bg-white ">
-        <div className="flex justify-between items-center mb-6">
-          
-          <Button variant="ghost" size="sm" onClick={toggleMobileMenu} className="w-8 h-8 p-0">
-            <X className="w-4 h-4" />
-          </Button>
+  <div className="md:hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-sm transition-opacity animate-fadeIn">
+ 
+    <div className="fixed right-0 top-0 h-full w-72 bg-white shadow-xl animate-slideIn flex flex-col">
+  
+      <div className="flex items-center justify-between px-4 py-3 border-b">
+        <span className="text-lg font-semibold">Menu</span>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={toggleMobileMenu}
+          className="w-8 h-8 p-0"
+        >
+          <X className="w-5 h-5" />
+        </Button>
+      </div>
+
+     
+      <div className="flex-1 overflow-y-auto px-4 py-6 space-y-6">
+        <div className="flex flex-col space-y-2">
+          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100">
+            <Home className="w-5 h-5" />
+            <span>Home</span>
+          </a>
+          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100">
+            <MessageSquare className="w-5 h-5" />
+            <span>Messages</span>
+          </a>
+          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100">
+            <Bookmark className="w-5 h-5" />
+            <span>Bookmarks</span>
+          </a>
+          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100">
+            <Zap className="w-5 h-5" />
+            <span>Generate</span>
+          </a>
+          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100">
+            <Check className="w-5 h-5" />
+            <span>Tasks</span>
+          </a>
+          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100">
+            <Triangle className="w-5 h-5" />
+            <span>Tools</span>
+          </a>
         </div>
 
-          <div className="space-y-6">
-            
-            <div className="space-y-2">
-            
-              <div className="flex flex-col gap-2">
-                <a href="#" className="justify-start gap-3 h-12">
-                  <Home className="w-4 h-4" />
-                  <span>Home</span>
-                </a>
-  a              <a href="#" className="justify-start gap-3 h-12">
-                  <MessageSquare className="w-4 h-4" />
-                  <span>Messages</span>
-                </a>
-                <a href="#" className="justify-start gap-3 h-12">
-                  <Bookmark className="w-4 h-4" />
-                  <span>Bookmarks</span>
-                </a>
-                <a href="#" className="justify-start gap-3 h-12">
-                  <Zap className="w-4 h-4" />
-                  <span>Generate</span>
-                </a>
-                <a href="#" className="justify-start gap-3 h-12">
-                  <Check className="w-4 h-4" />
-                  <span>Tasks</span>
-                </a>
-                <a href="#" className="justify-start gap-3 h-12">
-                  <Triangle className="w-4 h-4" />
-                  <span>Tools</span>
-                </a>
-                
-              </div>
-            </div>
-
-            <div className="space-y-2">
-        
-              <div className="flex flex-col gap-2">
-                <a href="#" className="justify-start gap-3 h-12">
-                  <Gallery className="w-4 h-4" />
-                  <span>Gallery</span>
-                </a >
-                <a href="#" className="justify-start gap-3 h-12">
-                  <HelpCircle className="w-4 h-4" />
-                  <span>Support</span>
-                </a >
-                <a href="#" className="justify-start gap-3 h-12">
-                  <Bell className="w-4 h-4" />
-                  <span>Notifications</span>
-                </a >
-                
-              </div>
-            </div>
-          </div>
+        <div className="flex flex-col space-y-2">
+          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100">
+            <Gallery className="w-5 h-5" />
+            <span>Gallery</span>
+          </a>
+          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100">
+            <HelpCircle className="w-5 h-5" />
+            <span>Support</span>
+          </a>
+          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100">
+            <Bell className="w-5 h-5" />
+            <span>Notifications</span>
+          </a>
         </div>
       </div>
-    )
+    </div>
+  </div>
+)
+
 
     return (
       <>

@@ -139,28 +139,7 @@ export default function GridSection() {
       </div>
 
       
-      <footer className="bg-gray-900 text-white mt-12">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 bg-foreground rounded-sm flex items-center justify-center">
-                <span className="text-background font-bold text-3xl">K</span>
-              </div>
-              <h1 className="font-bold text-3xl">Krea AI</h1>
-            </div>
-
-            <div className="flex items-center gap-2 text-3xl text-muted-foreground">
-              <span>curated by</span>
-              <div className="flex items-center gap-1 font-semibold text-foreground">
-                <div className="w-5 h-5 bg-foreground rounded flex items-center justify-center">
-                  <span className="text-background font-bold text-xs">M</span>
-                </div>
-                Mobbin
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+     
     </section>
   )
 }

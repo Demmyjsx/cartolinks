@@ -79,7 +79,7 @@ export default function GridSection() {
         </a>
       </div>
 
-      {/* Grid of tools */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {tools.map((tool) => {
           const IconComponent = tool.icon
@@ -89,7 +89,7 @@ export default function GridSection() {
               className="p-4 flex flex-col hover:shadow-md transition-shadow cursor-pointer group rounded-lg"
             >
               <div className="flex gap-3 items-start">
-                {/* Icon */}
+              
                 <div
                   className={`w-10 h-10 rounded-lg flex items-center justify-center ${tool.color}`}
                 >
@@ -124,19 +124,7 @@ export default function GridSection() {
       </div>
 
      
-      <div className="mt-12">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-2xl font-bold">Gallery</h2>
-          <div className="flex items-center gap-2">
-            <a href="#" className="text-xs">
-              Latest
-            </a>
-            <a href="#" className="text-xs">
-              Trending
-            </a>
-          </div>
-        </div>
-      </div>
+      
 
       
      
